@@ -1,0 +1,42 @@
+<?php
+
+namespace App\Controllers;
+use App\Models\CategoriesModel;
+
+class Category extends BaseController
+{
+    public function index()
+    {
+        $category = new CategoriesModel();
+        $data = [
+            'categories' => $category->findAll(),
+        ];
+        return view('admin/category', $data);
+    }
+
+    public function save()
+    {
+        $category  = new CategoriesModel();
+        $category->save([
+            'name' => $this->request->getPost('name'),
+        ]);
+        return redirect()->to('admin/category');
+    }
+
+    function update()
+    {
+        $category  = new CategoriesModel();
+        $category->replace([
+            'id_categories' => $this->request->getPost('id_categories'),
+            'name' => $this->request->getPost('name'),
+        ]);
+        return redirect()->to('admin/category');
+    }
+
+    public function delete()
+    {
+        $category  = new CategoriesModel();
+        $category->delete($this->request->getPost('id_categories'));
+        return redirect()->to('admin/category');
+    }
+}
