@@ -473,7 +473,6 @@ body .section::-webkit-scrollbar-thumb {
 }
 
 body .img-explore {
-  height: 600px;
   padding: 0;
 }
 
@@ -673,4 +672,31 @@ body .font-lora {
   .footer-2-3 .info-footer {
     padding: 0 6rem 3rem;
   }
+}
+
+.btn-subscribe {
+    border-radius: 8px !important;
+    font-size: 16px !important;
+    font-weight: 600;
+    color: #EEEEEE;
+}
+
+.form-subscribe {
+  padding: 12px 12px 12px 24px;
+    background: #FFFFFF;
+    border-radius: 12px;
+    height: 64px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
