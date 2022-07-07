@@ -118,12 +118,10 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-light-primary" data-bs-dismiss="modal">
-                                    <i class="bx bx-x d-block d-sm-none"></i>
-                                    <span class="d-none d-sm-block">Batal</span>
+                                    <span class="d-sm-block">Batal</span>
                                 </button>
                                 <button type="submit" name="submit" class="btn btn-primary ml-1" data-bs-dismiss="modal">
-                                    <i class="bx bx-check d-block d-sm-none"></i>
-                                    <span class="d-none d-sm-block">Simpan</span>
+                                    <span class="d-sm-block">Simpan</span>
                                 </button>
                             </div>
                     </div>
@@ -147,12 +145,10 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-light-primary" data-bs-dismiss="modal">
-                                    <i class="bx bx-x d-block d-sm-none"></i>
-                                    <span class="d-none d-sm-block">Batal</span>
+                                    <span class="d-sm-block">Batal</span>
                                 </button>
                                 <button type="submit" name="submit" class="btn btn-primary ml-1" data-bs-dismiss="modal">
-                                    <i class="bx bx-check d-block d-sm-none"></i>
-                                    <span class="d-none d-sm-block">Simpan</span>
+                                    <span class="d-sm-block">Simpan</span>
                                 </button>
                             </div>
                     </div>
@@ -183,12 +179,10 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-light-primary" data-bs-dismiss="modal">
-                                    <i class="bx bx-x d-block d-sm-none"></i>
-                                    <span class="d-none d-sm-block">Batal</span>
+                                    <span class="d-sm-block">Batal</span>
                                 </button>
                                 <button type="submit" name="submit" class="btn btn-primary ml-1" data-bs-dismiss="modal">
-                                    <i class="bx bx-check d-block d-sm-none"></i>
-                                    <span class="d-none d-sm-block">Simpan</span>
+                                    <span class="d-sm-block">Simpan</span>
                                 </button>
                             </div>
                     </div>

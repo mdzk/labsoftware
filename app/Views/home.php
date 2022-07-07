@@ -7,11 +7,12 @@
     <title>Lab Software Politeknik Negeri Lampung</title>
     <link rel="stylesheet" href="<?= base_url(); ?>/assets/css/main/app.css">
     <link rel="stylesheet" href="<?= base_url(); ?>/assets/css/pages/home.css">
+    <link rel="icon" type="image/x-icon" href="<?= base_url(); ?>/assets/images/logo/favicon.png">
 
 </head>
 
 <body>
-    <section class="h-100 w-100" style="box-sizing: border-box; background-color: #141432">
+    <section id="home" class="h-100 w-100" style="box-sizing: border-box; background-color: #141432">
 
         <div class="container-xxl mx-auto p-0  position-relative header-2-3" style="font-family: 'Poppins', sans-serif;">
             <nav class="navbar navbar-expand-lg navbar-dark">
@@ -27,7 +28,7 @@
                         <div class="modal-content border-0" style="background-color: #141432;">
                             <div class="modal-header border-0" style="padding:	2rem; padding-bottom: 0;">
                                 <a class="modal-title" id="targetModalLabel">
-                                    <img style="margin-top:0.5rem" src="http://api.elements.buildwithangga.com/storage/files/2/assets/Header/Header2/Header-2-3.png" alt="">
+                                    <img style="margin-top:0.5rem" src="<?= base_url(); ?>/assets/images/logo/favicon.png" height="42px" alt="">
                                 </a>
                                 <button type="button" class="close btn-close text-white" data-bs-dismiss="modal" aria-label="Close">
                                 </button>
@@ -38,15 +39,18 @@
                                         <a class="nav-link" href="#" style="color: #E7E7E8;">Home</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">Layanan</a>
+                                        <a class="nav-link" href="#layanan">Layanan</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">Artikel</a>
+                                        <a class="nav-link" href="#artikel">Artikel</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#kontak">Hubungi kami</a>
                                     </li>
                                 </ul>
                             </div>
                             <div class="modal-footer border-0 gap-3" style="padding:	2rem; padding-top: 0.75rem">
-                                <button class="btn btn-fill border-0 text-white">Try Now</button>
+                                <button class="btn btn-fill border-0 text-white">Coba Sekarang</button>
                             </div>
                         </div>
                     </div>
@@ -58,14 +62,17 @@
                             <a class="nav-link" href="#" style="color: #E7E7E8;">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Layanan</a>
+                            <a class="nav-link" href="#layanan">Layanan</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Artikel</a>
+                            <a class="nav-link" href="#artikel">Artikel</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#kontak">Hubungi kami</a>
                         </li>
                     </ul>
                     <div class="gap-3">
-                        <button class="btn btn-fill text-white border-0">Try Now</button>
+                        <button class="btn btn-fill text-white border-0">Coba Sekarang</button>
                     </div>
                 </div>
             </nav>
@@ -74,23 +81,12 @@
                 <div class="mx-auto d-flex flex-lg-row flex-column hero">
                     <!-- Left Column -->
                     <div class="left-column d-flex flex-lg-grow-1 flex-column align-items-lg-start text-lg-start align-items-center text-center">
-                        <p class="text-caption">FREE 30 DAY TRIAL</p>
-                        <h1 class="title-text-big">The best way<br class=" d-lg-block d-none"> to organize your online learning</h1>
-                        <div class="d-flex flex-sm-row flex-column align-items-center mx-lg-0 mx-auto justify-content-center gap-3">
-                            <button class="btn d-inline-flex mb-md-0 btn-try text-white border-0">Try it free</button>
-                            <button class="btn btn-outline">
-                                <div class="d-flex align-items-center">
-                                    <svg class="me-2" width="13" height="12" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M10.9293 8L6.66668 5.158V10.842L10.9293 8ZM12.9173 8.27734L5.85134 12.988C5.80115 13.0214 5.74283 13.0406 5.6826 13.0435C5.62238 13.0463 5.5625 13.0328 5.50934 13.0044C5.45619 12.9759 5.41175 12.9336 5.38075 12.8818C5.34976 12.8301 5.33337 12.771 5.33334 12.7107V3.28934C5.33337 3.22904 5.34976 3.16989 5.38075 3.11817C5.41175 3.06645 5.45619 3.0241 5.50934 2.99564C5.5625 2.96719 5.62238 2.95368 5.6826 2.95656C5.74283 2.95944 5.80115 2.9786 5.85134 3.012L12.9173 7.72267C12.963 7.75311 13.0004 7.79435 13.0263 7.84273C13.0522 7.89111 13.0658 7.94513 13.0658 8C13.0658 8.05488 13.0522 8.1089 13.0263 8.15728C13.0004 8.20566 12.963 8.2469 12.9173 8.27734Z" fill="#707092" />
-                                    </svg>
-                                    Watch the video
-                                </div>
-                            </button>
-                        </div>
+                        <h1 class="title-text-big">Selamat datang<br class=" d-lg-block d-none"> di Lab. Software POLINELA</h1>
+                        <p class="fs-4">Nikmati layanan dari kami untuk mendukung pembelajaran kamu! 😎</p>
                     </div>
                     <!-- Right Column -->
                     <div class="right-column text-center d-flex justify-content-center pe-0">
-                        <img id="img-fluid" class="h-auto mw-100" src="http://api.elements.buildwithangga.com/storage/files/2/assets/Header/Header2/Header-2-1.png" alt="">
+                        <img id="img-fluid" class="h-auto mw-100" src="<?= base_url(); ?>/assets/images/Header-2-1.png" alt="">
                     </div>
 
                 </div>
@@ -99,12 +95,12 @@
 
 
     </section>
-    <section class="h-100 w-100" style="box-sizing: border-box; background-color: #141432; ">
+    <section id="layanan" class="h-100 w-100" style="box-sizing: border-box; background-color: #141432; ">
         <div class="content-2-3 container-xxl mx-auto p-0  position-relative" style="font-family: 'Poppins', sans-serif">
             <div class="text-center title-text">
-                <h1 class="text-title text-white">3 Keys Benefit</h1>
+                <h1 class="text-title text-white">Yang kami berikan</h1>
                 <p class="text-caption" style="margin-left: 3rem; margin-right: 3rem">
-                    You can easily manage your business with a powerful tools
+                    Kamu bisa ini dapatkan ini semua dari kami.
                 </p>
             </div>
 
@@ -114,30 +110,30 @@
                         <div class="icon">
                             <img src="http://api.elements.buildwithangga.com/storage/files/2/assets/Content/Content2/Content-2-8.png" alt="" />
                         </div>
-                        <h3 class="icon-title text-white">Easy to Operate</h3>
+                        <h3 class="icon-title text-white">Sertifikasi Internasional</h3>
                         <p class="icon-caption">
-                            This can easily help you to<br />
-                            grow up your business fast
+                            Kami akan membantu untuk<br />
+                            melakukan sertifikasi Internasional.
                         </p>
                     </div>
                     <div class="col-lg-4 column">
                         <div class="icon">
                             <img src="http://api.elements.buildwithangga.com/storage/files/2/assets/Content/Content2/Content-2-9.png" alt="" />
                         </div>
-                        <h3 class="icon-title text-white">Real-Time Analytic</h3>
+                        <h3 class="icon-title text-white">Gratis Hosting</h3>
                         <p class="icon-caption">
-                            With real-time analytics, you<br />
-                            can check data in real time
+                            Dapatkan layanan hosting<br />
+                            untuk bagi mahasiswa Manajemen Informatika.
                         </p>
                     </div>
                     <div class="col-lg-4 column">
                         <div class="icon">
                             <img src="http://api.elements.buildwithangga.com/storage/files/2/assets/Content/Content2/Content-2-10.png" alt="" />
                         </div>
-                        <h3 class="icon-title text-white">Very Full Secured</h3>
+                        <h3 class="icon-title text-white">Form Control Laboratorium</h3>
                         <p class="icon-caption">
-                            With real-time analytics, we<br />
-                            will guarantee your data
+                            Bantu kami untuk mengontrol<br />
+                            agar menjadi lebih baik.
                         </p>
                     </div>
                 </div>
@@ -151,43 +147,59 @@
                         </div>
                         <div class="flex-grow-1 text-lg-start text-center card-text">
                             <h3 class="card-title text-white">
-                                Fast Business Management in 30 minutes
+                                Hosting website mu sekarang, Gratis!
                             </h3>
                             <p class="card-caption">
-                                Our tools for business analysis helps an organization
-                                understand<br class="d-none d-lg-block" />
-                                market or business development.
+                                Khusus untuk kamu yang ingin mendapatkan hosting gratis,<br class="d-none d-lg-block" />
+                                syarat dan ketentuan berlaku.
                             </p>
                         </div>
                         <div class="card-btn-space">
-                            <button class="btn btn-card text-white">Buy Now</button>
-                            <button class="btn btn-outline">Demo Version</button>
+                            <button style="width: max-content;" class="btn btn-card text-white">Coba Sekarang</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="explore">
+    <section id="artikel" class="explore">
         <div class="pl-house">
             <div class="row text-content title pt-35 my-0 mx-0" id="header">
                 <div class="col-md-9 px-md-0">
                     <h1 class="pb-3">
-                        Explore our promos
+                        Artikel terbaru
                     </h1>
                     <p class="pb-0 descript-explore">
-                        Blandit <span class="cl-blue">1,900</span> natoque dui justo, dictum turpis amet, viverra vel
-                        ornare quis mattis mi ac eget id integer dolor dui aliquam volutpat varius pulvinar massa
+                        Dapatkan informasi seputar teknologi terbaru dari kami, <br>
+                        jangan sampai ketinggalan ya!
                     </p>
                 </div>
                 <div class="col-md-3 mt-md-3">
-                    <button class="btn btn-blue px-5 py-3 mt-0">Learn More</button>
+                    <button class="btn btn-blue px-5 py-3 mt-0">Lebih banyak</button>
                 </div>
             </div>
             <div class="row section scrolling-wrapper flex-row flex-nowrap mt-3 img-explore mx-2">
-                <img src="https://api.elements.buildwithangga.com/storage/files/2/assets/Content/Content-House/image-1.jpeg" alt="image-1" class="img-fluid">
-                <img src="https://api.elements.buildwithangga.com/storage/files/2/assets/Content/Content-House/image-2.jpeg" alt="image-2" class="img-fluid">
-                <img src="https://api.elements.buildwithangga.com/storage/files/2/assets/Content/Content-House/image-3.jpeg" alt="image-3" class="img-fluid">
+
+                <?php
+
+                                                                        use function App\Controllers\truncateString;
+
+ foreach ($articles as $article) : ?>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="card">
+                            <div class="card-content">
+                                <img class="card-img-top img-fluid" style="object-fit: cover;" src="<?= base_url(); ?>/img/<?= $article['thumbnail']; ?>" alt="Card image cap" style="height: 20rem">
+                                <div class="card-body">
+                                    <span class="badge bg-light-success my-2"><?= $article['name']; ?></span>
+                                    <h4 class="card-title mb-3"><?= $article['title']; ?></h4>
+                                    <p class="card-text">
+                                        <?php print(truncateString($article['description'], 60, true) . "\n"); ?>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
             </div>
         </div>
     </section>
@@ -200,7 +212,7 @@
             <div class="row">
                 <div class="col">
                     <h1 class="text-center">
-                        Trusted by over 400 global leading companies
+                        Kami telah berkolaborasi dengan berbagai perusahaan
                     </h1>
                 </div>
             </div>
@@ -216,106 +228,69 @@
         <div class="container review-section">
             <div class="row">
                 <div class="col-md-5 px-5 mt-4 mt-md-0">
-                    <img src="https://api.elements.buildwithangga.com/storage/files/2/assets/Content/Content-workly/profile-client.png" alt="" class="img-fluid">
+                    <img src="<?= base_url(); ?>/assets/images/zuriati.jpg" alt="" class="img-fluid">
                 </div>
                 <div class="col-md-7 mt-4 mt-md-0">
                     <div class="text-end">
                         <img src="https://api.elements.buildwithangga.com/storage/files/2/assets/Content/Content-workly/petik.png" alt="mark" class="img-fluid">
                     </div>
                     <p class="review">
-                        Since I used Work.ly, now I can have a decent workflow. There are also some improvements that
-                        are felt by my fellow workers.
-                        I am very happy using this platform and I recommend Work.ly to all of you guys!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore vel unde voluptatibus, odit, nobis sequi voluptate magni molestias non eius voluptas atque necessitatibus tempora eos recusandae labore quis dolor tenetur.
                     </p>
                     <h5 class="mt-5">
-                        John Doe
+                        Zuriati, S.Kom., M.Kom.
                     </h5>
                     <p class="company">
-                        Sharp Indonesia
+                        Kepala Lab. Software POLINELA
                     </p>
                 </div>
             </div>
         </div>
     </section>
-    <section class="h-100 w-100" style="box-sizing: border-box; background-color: #141432">
+    <section id="kontak" class="h-100 w-100" style="box-sizing: border-box; background-color: #141432">
         <div class="footer-2-3 container-xxl mx-auto position-relative p-0" style="font-family: 'Poppins', sans-serif">
             <div class="list-footer">
                 <div class="row gap-md-0 gap-3">
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-6 col-md-6">
                         <div class="">
                             <div class="list-space">
-                                <img src="http://api.elements.buildwithangga.com/storage/files/2/assets/Header/Header2/Header-2-3.png" alt="" />
+                                <img src="<?= base_url(); ?>/assets/images/logo/favicon.png" height="42px" alt="" />
                             </div>
+                            <h2 class="footer-text-title text-white">Tentang kami</h2>
                             <nav class="list-unstyled">
-                                <li class="list-space">
-                                    <a href="" class="list-menu">Home</a>
-                                </li>
-                                <li class="list-space">
-                                    <a href="" class="list-menu">About</a>
-                                </li>
-                                <li class="list-space">
-                                    <a href="" class="list-menu">Features</a>
-                                </li>
-                                <li class="list-space">
-                                    <a href="" class="list-menu">Pricing</a>
-                                </li>
-                                <li class="list-space">
-                                    <a href="" class="list-menu">Testimonial</a>
-                                </li>
-                                <li class="list-space">
-                                    <a href="" class="list-menu">Help</a>
-                                </li>
+                                Selamat datang kembali di Website Laboratorium Software Politeknik Negeri Lampung, kini website dengan tampilan baru, dengan tampilan yang lebih menarik dan responsive.
                             </nav>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
-                        <h2 class="footer-text-title text-white">Product</h2>
+                        <h2 class="footer-text-title text-white">Navigasi</h2>
                         <nav class="list-unstyled">
                             <li class="list-space">
-                                <a href="" class="list-menu">Real Time Analytic</a>
+                                <a href="#home" class="list-menu">Home</a>
                             </li>
                             <li class="list-space">
-                                <a href="" class="list-menu">Easy to Operate</a>
+                                <a href="#layanan" class="list-menu">Layanan</a>
                             </li>
                             <li class="list-space">
-                                <a href="" class="list-menu">Full Secured</a>
+                                <a href="#artikel" class="list-menu">Artikel</a>
                             </li>
                             <li class="list-space">
-                                <a href="" class="list-menu">Analytic Tool</a>
-                            </li>
-                            <li class="list-space">
-                                <a href="" class="list-menu">Story</a>
+                                <a href="#kontak" class="list-menu">Hubungi kami</a>
                             </li>
                         </nav>
                     </div>
                     <div class="col-lg-3 col-md-6">
-                        <h2 class="footer-text-title text-white">Company</h2>
+                        <h2 class="footer-text-title text-white">Kontak kami</h2>
                         <nav class="list-unstyled">
                             <li class="list-space">
-                                <a href="" class="list-menu">Contact Us</a>
+                                <a class="list-menu">
+                                    <i class="bi bi-telephone-fill"></i> +62896 2645 8878
+                                </a>
                             </li>
                             <li class="list-space">
-                                <a href="" class="list-menu">Blog</a>
-                            </li>
-                            <li class="list-space">
-                                <a href="" class="list-menu">Culture</a>
-                            </li>
-                            <li class="list-space">
-                                <a href="" class="list-menu">Security</a>
-                            </li>
-                        </nav>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <h2 class="footer-text-title text-white">Support</h2>
-                        <nav class="list-unstyled">
-                            <li class="list-space">
-                                <a href="" class="list-menu">Getting Started</a>
-                            </li>
-                            <li class="list-space">
-                                <a href="" class="list-menu">Help Center</a>
-                            </li>
-                            <li class="list-space">
-                                <a href="" class="list-menu">Server Status</a>
+                                <a class="list-menu">
+                                    <i class="bi bi-geo-alt-fill"></i> Gedung Sakura Lt. 2 Politeknik Negeri Lampung
+                                </a>
                             </li>
                         </nav>
                     </div>
@@ -383,7 +358,7 @@
                         <a href="" class="footer-link" style="text-decoration: none">Licenses</a>
                     </nav>
                     <nav class="d-flex flex-lg-row flex-column align-items-center justify-content-center">
-                        <p style="margin: 0">Copyright © 2021 Analystic Max</p>
+                        <p style="margin: 0">Copyright © <?= date('Y'); ?> Lab. Software POLINELA</p>
                     </nav>
                 </div>
             </div>

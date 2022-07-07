@@ -81,13 +81,11 @@
                                                 <input type="number" hidden value="<?= $article['id_articles']; ?>" name="id_articles">
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-light-primary" data-bs-dismiss="modal">
-                                                        <i class="bx bx-x d-block d-sm-none"></i>
-                                                        <span class="d-none d-sm-block">Tidak</span>
+                                                        <span class="d-sm-block">Tidak</span>
                                                     </button>
 
                                                     <button name="submit" type="submit" class="btn btn-primary" data-bs-dismiss="modal">
-                                                        <i class="bx bx-x d-block d-sm-none"></i>
-                                                        <span class="d-none d-sm-block">Ya</span>
+                                                        <span class="d-sm-block">Ya</span>
                                                     </button>
 
                                                 </div>
