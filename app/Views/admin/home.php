@@ -8,7 +8,7 @@
     <section class="row">
         <div class="col-12 col-lg-12">
             <div class="row">
-                <div class="col-6 col-lg-3 col-md-6">
+                <div class="col-sm-12 col-md-6 col-lg-3 col-6">
                     <div class="card">
                         <div class="card-body px-3 py-4-5">
                             <div class="row">
@@ -25,7 +25,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-6 col-lg-3 col-md-6">
+                <div class="col-sm-12 col-md-6 col-lg-3 col-6">
                     <div class="card">
                         <div class="card-body px-3 py-4-5">
                             <div class="row">
@@ -42,7 +42,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-6 col-lg-3 col-md-6">
+                <div class="col-sm-12 col-md-6 col-lg-3 col-6">
                     <div class="card">
                         <div class="card-body px-3 py-4-5">
                             <div class="row">
@@ -59,7 +59,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-6 col-lg-3 col-md-6">
+                <div class="col-sm-12 col-md-6 col-lg-3 col-6">
                     <div class="card">
                         <div class="card-body py-4 px-5">
                             <div class="d-flex align-items-center">
@@ -80,7 +80,7 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4>Lab Visitors</h4>
+                            <h4>Web Visitors this year</h4>
                         </div>
                         <div class="card-body">
                             <div id="chart-profile-visit"></div>

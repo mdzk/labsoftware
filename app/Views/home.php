@@ -33,7 +33,7 @@
             <div class="row">
                 <div class="col-lg-4 column">
                     <div class="icon">
-                        <img src="http://api.elements.buildwithangga.com/storage/files/2/assets/Content/Content2/Content-2-8.png" alt="" />
+                        <img src="<?= base_url(); ?>/assets/images/Content-2-8.png" alt="" />
                     </div>
                     <h3 class="icon-title text-white">Sertifikasi Internasional</h3>
                     <p class="icon-caption">
@@ -43,7 +43,7 @@
                 </div>
                 <div class="col-lg-4 column">
                     <div class="icon">
-                        <img src="http://api.elements.buildwithangga.com/storage/files/2/assets/Content/Content2/Content-2-9.png" alt="" />
+                        <img src="<?= base_url(); ?>/assets/images/Content-2-9.png" alt="" />
                     </div>
                     <h3 class="icon-title text-white">Gratis Hosting</h3>
                     <p class="icon-caption">
@@ -53,7 +53,7 @@
                 </div>
                 <div class="col-lg-4 column">
                     <div class="icon">
-                        <img src="http://api.elements.buildwithangga.com/storage/files/2/assets/Content/Content2/Content-2-10.png" alt="" />
+                        <img src="<?= base_url(); ?>/assets/images/Content-2-10.png" alt="" />
                     </div>
                     <h3 class="icon-title text-white">Form Control Laboratorium</h3>
                     <p class="icon-caption">
@@ -68,7 +68,7 @@
             <div class="card">
                 <div class="d-flex flex-lg-row flex-column align-items-center">
                     <div class="me-lg-3">
-                        <img src="http://api.elements.buildwithangga.com/storage/files/2/assets/Content/Content2/Content-2-1%20(1).png" alt="" />
+                        <img src="<?= base_url(); ?>/assets/images/Content-2-1%20(1).png" alt="" />
                     </div>
                     <div class="flex-grow-1 text-lg-start text-center card-text">
                         <h3 class="card-title text-white">
@@ -118,7 +118,7 @@
                             <img class="card-img-top img-fluid" style="object-fit: cover;" src="<?= base_url(); ?>/img/<?= $article['thumbnail']; ?>" alt="Card image cap" style="height: 20rem">
                             <div class="card-body">
                                 <span class="badge bg-light-success my-2"><?= $article['name']; ?></span>
-                                <h4 class="card-title mb-3"><?= $article['title']; ?></h4>
+                                <h4 class="card-title mb-3"><a href="<?= base_url(); ?>/article/<?= $article['slug']; ?>"><?= $article['title']; ?></a></h4>
                                 <p class="card-text">
                                     <?php print(truncateString($article['description'], 60, true) . "\n"); ?>
                                 </p>
@@ -132,7 +132,7 @@
 </section>
 <section class="client position-relative">
     <div class="left-circle">
-        <img src="https://api.elements.buildwithangga.com/storage/files/2/assets/Content/Content-workly/Left-Circle.png" alt="circle">
+        <img src="<?= base_url(); ?>/assets/images/Left-Circle.png" alt="circle">
 
     </div>
     <div class="container-fluid position-relative">
@@ -144,12 +144,12 @@
             </div>
         </div>
         <div class="row mt-5 client-img d-flex justify-content-center mx-0">
-            <img src="https://api.elements.buildwithangga.com/storage/files/2/assets/Content/Content-workly/client-1.png" alt="client" width="185" class="img-fluid mx-2 mx-md-4">
-            <img src="https://api.elements.buildwithangga.com/storage/files/2/assets/Content/Content-workly/client-2.png" alt="client" width="185" class="img-fluid mx-2 mx-md-4">
-            <img src="https://api.elements.buildwithangga.com/storage/files/2/assets/Content/Content-workly/client-3.png" alt="client" width="185" class="img-fluid mx-2 mx-md-4">
-            <img src="https://api.elements.buildwithangga.com/storage/files/2/assets/Content/Content-workly/client-4.png" alt="client" width="185" class="img-fluid mx-2 mx-md-4">
-            <img src="https://api.elements.buildwithangga.com/storage/files/2/assets/Content/Content-workly/client-5.png" alt="client" width="185" class="img-fluid mx-2 mx-md-4">
-            <img src="https://api.elements.buildwithangga.com/storage/files/2/assets/Content/Content-workly/client-6.png" alt="client" width="185" class="img-fluid mx-2 mx-md-4">
+            <img src="<?= base_url(); ?>/assets/images/client-1.png" alt="client" width="185" class="img-fluid mx-2 mx-md-4">
+            <img src="<?= base_url(); ?>/assets/images/client-2.png" alt="client" width="185" class="img-fluid mx-2 mx-md-4">
+            <img src="<?= base_url(); ?>/assets/images/client-3.png" alt="client" width="185" class="img-fluid mx-2 mx-md-4">
+            <img src="<?= base_url(); ?>/assets/images/client-4.png" alt="client" width="185" class="img-fluid mx-2 mx-md-4">
+            <img src="<?= base_url(); ?>/assets/images/client-5.png" alt="client" width="185" class="img-fluid mx-2 mx-md-4">
+            <img src="<?= base_url(); ?>/assets/images/client-6.png" alt="client" width="185" class="img-fluid mx-2 mx-md-4">
         </div>
     </div>
     <div class="container review-section">
@@ -159,7 +159,7 @@
             </div>
             <div class="col-md-7 mt-4 mt-md-0">
                 <div class="text-end">
-                    <img src="https://api.elements.buildwithangga.com/storage/files/2/assets/Content/Content-workly/petik.png" alt="mark" class="img-fluid">
+                    <img src="<?= base_url(); ?>/assets/images/petik.png" alt="mark" class="img-fluid">
                 </div>
                 <p class="review">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore vel unde voluptatibus, odit, nobis sequi voluptate magni molestias non eius voluptas atque necessitatibus tempora eos recusandae labore quis dolor tenetur.

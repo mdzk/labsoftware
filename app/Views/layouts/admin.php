@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="<?= base_url(); ?>/assets/css/main/app-dark.css">
     <link rel="stylesheet" href="<?= base_url(); ?>/assets/css/shared/iconly.css">
     <link rel="stylesheet" href="<?= base_url(); ?>/assets/css/pages/summernote.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>/assets/css/pages/sweetalert2.css">
     <link rel="shortcut icon" href="<?= base_url(); ?>/assets/images/logo/favicon.png" type="image/png">
 
 </head>
@@ -82,13 +83,13 @@
                             </a>
                         </li>
 
-                        <?php if($_SESSION['roles'] == 'admin'): ?>
-                        <li class="sidebar-item <?= get_url(3, 'users') ? 'active' : '' ?>">
-                            <a data-turbolinks="false" href="<?= route_to('users'); ?>" class='sidebar-link'>
-                                <i class="bi bi-people-fill"></i>
-                                <span>Management Users</span>
-                            </a>
-                        </li>
+                        <?php if ($_SESSION['roles'] == 'admin') : ?>
+                            <li class="sidebar-item <?= get_url(3, 'users') ? 'active' : '' ?>">
+                                <a data-turbolinks="false" href="<?= route_to('users'); ?>" class='sidebar-link'>
+                                    <i class="bi bi-people-fill"></i>
+                                    <span>Management Users</span>
+                                </a>
+                            </li>
                         <?php endif; ?>
 
                         <li class="sidebar-item">
@@ -125,19 +126,30 @@
     <script src="<?= base_url(); ?>/assets/js/extensions/jquery.min.js"></script>
     <script>
         var wtf = $.ajax({
-            url: "<?= base_url().'/admin/statistic'; ?>",
+            url: "<?= base_url() . '/admin/statistic'; ?>",
             async: false,
             dataType: 'json'
         }).responseJSON;
     </script>
     <script src="<?= base_url(); ?>/assets/js/pages/dashboard.js"></script>
     <script src="<?= base_url(); ?>/assets/js/extensions/summernote.js"></script>
+    <!-- <script src="<?= base_url(); ?>/assets/js/extensions/sweetalert2.js"></script> -->
+    <script src="<?= base_url(); ?>/assets/js/extensions/sweetalert2.min.js"></script>
     <script>
         $("#summernote").summernote({
             tabsize: 2,
             height: 320,
         })
     </script>
+    <?php if (session()->getFlashdata('pesan')) : ?>
+        <script>
+            Swal.fire(
+                'Berhasil!',
+                '<?= session()->getFlashdata('pesan'); ?>',
+                'success'
+            )
+        </script>
+    <?php endif; ?>
 </body>
 
 </html>

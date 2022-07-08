@@ -25,6 +25,7 @@ class Setting extends BaseController
             'password' => empty($this->request->getVar('password')) ? $data['password'] : password_hash($this->request->getVar('password'), PASSWORD_DEFAULT),
         ]);
 
+        session()->setFlashdata('pesan', 'Data berhasil diedit');
         return redirect()->to('admin/setting');
     }
 }

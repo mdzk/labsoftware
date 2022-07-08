@@ -34,8 +34,10 @@ class Article extends BaseController
             $thumbnail->move('img', $thumbnailName);
         }
 
+        $slug = url_title($this->request->getPost('title'), '-', true);
         $article  = new ArticlesModel();
         $article->save([
+            'slug' => $slug,
             'title' => $this->request->getPost('title'),
             'description' => $this->request->getPost('description'),
             'thumbnail' => $thumbnailName,
@@ -43,6 +45,8 @@ class Article extends BaseController
             'id_users' => session()->get('id_users'),
             'id_categories' => $this->request->getPost('id_categories'),
         ]);
+
+        session()->setFlashdata('pesan', 'Artikel berhasil ditambahkan');
         return redirect()->to('admin/article');
     }
 
@@ -56,6 +60,7 @@ class Article extends BaseController
         }
 
         $article->delete($id);
+        session()->setFlashdata('pesan', 'Artikel berhasil dihapus');
         return redirect()->to('admin/article');
     }
 
@@ -67,6 +72,7 @@ class Article extends BaseController
             'article' => $article->join('categories', 'categories.id_categories = articles.id_categories')->find($id),
             'categories' => $category->findAll(),
         ];
+        
         return view('admin/article-edit', $data);
     }
 
@@ -76,15 +82,17 @@ class Article extends BaseController
         $data = $article->find($this->request->getVar('id_articles'));
         
         $thumbnail = $this->request->getFile('thumbnail');
-        if ($thumbnail->getError() == 4) {
-            $thumbnailName = 'dafault.jpg';
+        if ($thumbnail == '') {
+            $thumbnailName = $data['thumbnail'];
         } else {
             $thumbnailName = $thumbnail->getRandomName();
             $thumbnail->move('img', $thumbnailName);
             unlink('img/'. $data['thumbnail']);
         }
 
+        $slug = url_title($this->request->getPost('title'), '-', true);
         $article->replace([
+            'slug' => $slug,
             'id_articles' => $this->request->getVar('id_articles'),
             'title' => $this->request->getVar('title'),
             'description' => $this->request->getVar('description'),
@@ -93,7 +101,7 @@ class Article extends BaseController
             'id_users' => $data['id_users'],
             'id_categories' => $this->request->getPost('id_categories'),
         ]);
-
+        session()->setFlashdata('pesan', 'Artikel berhasil diedit');
         return redirect()->to('admin/article');
     }
 }

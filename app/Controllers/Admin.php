@@ -14,8 +14,8 @@ class Admin extends BaseController
         $visitor    = new VisitorsModel();
         $data = [
             'user'  => $user->find(session()->get('id_users')),
-            'visitor_lab' => $visitor->where('type', 1)->countAllResults(),
-            'visitor_web' => $visitor->where('type', 2)->countAllResults(),
+            'visitor_lab' => $visitor->where('DAY(created_at)', date('d'))->where('type', 1)->countAllResults(),
+            'visitor_web' => $visitor->where('DAY(created_at)', date('d'))->where('type', 2)->countAllResults(),
             'article' => $article->countAllResults(),
         ];
         return view('admin/home', $data);
@@ -25,7 +25,7 @@ class Admin extends BaseController
     {
         function bulan($a) {
             $visitor = new VisitorsModel();
-            $bulan = $visitor->where('MONTH(created_at)', $a)->where('type', 1)->countAllResults();
+            $bulan = $visitor->where('MONTH(created_at)', $a)->where('YEAR(created_at)', date('Y'))->where('type', 2)->countAllResults();
             return $bulan;
         };
         $month = array(bulan(1), bulan(2), bulan(3), bulan(4), bulan(5), bulan(6), bulan(7), bulan(8), bulan(9), bulan(10), bulan(11), bulan(12));

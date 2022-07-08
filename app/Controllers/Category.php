@@ -20,6 +20,7 @@ class Category extends BaseController
         $category->save([
             'name' => $this->request->getPost('name'),
         ]);
+        session()->setFlashdata('pesan', 'Kategori berhasil ditambahkan');
         return redirect()->to('admin/category');
     }
 
@@ -30,6 +31,7 @@ class Category extends BaseController
             'id_categories' => $this->request->getPost('id_categories'),
             'name' => $this->request->getPost('name'),
         ]);
+        session()->setFlashdata('pesan', 'Kategori berhasil diedit');
         return redirect()->to('admin/category');
     }
 
@@ -37,6 +39,7 @@ class Category extends BaseController
     {
         $category  = new CategoriesModel();
         $category->delete($this->request->getPost('id_categories'));
+        session()->setFlashdata('pesan', 'Kategori berhasil dihapus');
         return redirect()->to('admin/category');
     }
 }

@@ -41,6 +41,10 @@ $routes->get('/', 'Home::index');
 $routes->get('/barcode', 'Barcode::index');
 $routes->get('/enter', 'Barcode::enter', ['as' => 'barcode-enter']);
 $routes->get('/article', 'Home::article', ['as' => 'home-article']);
+$routes->get('/article/(:segment)', 'Home::detail/$1', ['as' => 'home-article-detail']);
+$routes->get('/search/(:segment)', 'Home::search/$1', ['as' => 'home-article-search']);
+$routes->post('/proses', 'Home::proses');
+
 $routes->get('/gethosting', 'Home::hosting', ['as' => 'home-hosting']);
 
 $routes->get('/admin', 'Admin::index', ['as' => 'home', 'filter' => 'auth']);

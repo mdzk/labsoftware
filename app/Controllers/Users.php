@@ -27,6 +27,7 @@ class Users extends BaseController
             'password' => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT),
         ]);
 
+        session()->setFlashdata('pesan', 'User berhasil ditambahkan');
         return redirect()->to('admin/users');
     }
 
@@ -34,6 +35,7 @@ class Users extends BaseController
     {
         $user = new UsersModel();
         $user->delete($this->request->getVar('id_users'));
+        session()->setFlashdata('pesan', 'User berhasil dihapus');
         return redirect()->to('admin/users');
     }
 
@@ -49,6 +51,7 @@ class Users extends BaseController
             'password' => empty($this->request->getVar('password')) ? $data['password'] : password_hash($this->request->getVar('password'), PASSWORD_DEFAULT),
         ]);
 
+        session()->setFlashdata('pesan', 'User berhasil diedit');
         return redirect()->to('admin/users');
     }
 }
