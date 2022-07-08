@@ -49,7 +49,7 @@
                                 </ul>
                             </div>
                             <div class="modal-footer border-0 gap-3" style="padding:	2rem; padding-top: 0.75rem">
-                                <button class="btn btn-fill border-0 text-white">Coba Sekarang</button>
+                                <a href="<?= route_to('home-hosting'); ?>" class="btn btn-fill border-0 text-white">Coba Sekarang</a>
                             </div>
                         </div>
                     </div>
@@ -71,7 +71,7 @@
                         </li>
                     </ul>
                     <div class="gap-3">
-                        <button class="btn btn-fill text-white border-0">Coba Sekarang</button>
+                        <a href="<?= route_to('home-hosting'); ?>" class="btn btn-fill text-white border-0">Coba Sekarang</a>
                     </div>
                 </div>
             </nav>

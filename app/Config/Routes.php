@@ -46,6 +46,7 @@ $routes->get('/search/(:segment)', 'Home::search/$1', ['as' => 'home-article-sea
 $routes->post('/proses', 'Home::proses');
 
 $routes->get('/gethosting', 'Home::hosting', ['as' => 'home-hosting']);
+$routes->post('/gethosting/success', 'Home::hostingAdd', ['as' => 'home-hosting-add']);
 
 $routes->get('/admin', 'Admin::index', ['as' => 'home', 'filter' => 'auth']);
 $routes->get('/admin/statistic', 'Admin::statistic', ['as' => 'statistic-lab']);
@@ -79,6 +80,9 @@ $routes->get('/login', 'Auth::index', ['as' => 'login']);
 $routes->post('/login/auth', 'Auth::auth', ['as' => 'auth']);
 $routes->get('/logout', 'Auth::logout', ['as' => 'logout']);
 
+$routes->set404Override(function(){
+    return view('404');
+});
 /*
  * --------------------------------------------------------------------
  * Additional Routing

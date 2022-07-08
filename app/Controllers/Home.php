@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Models\ArticlesModel;
 use App\Models\VisitorsModel;
+use App\Models\FormHostingModel;
 
 class Home extends BaseController
 {
@@ -76,6 +77,24 @@ class Home extends BaseController
     public function hosting()
     {
         return view('hosting');
+    }
+
+    public function hostingAdd()
+    {
+        if(!isset($_POST)){
+            return redirect()->to('/');
+        }
+        $hosting = new FormHostingModel();
+        $hosting->save([
+            'email' => $this->request->getPost('email'),
+            'name' => $this->request->getPost('name'),
+            'npm' => $this->request->getPost('npm'),
+            'subdomain' => $this->request->getPost('subdomain'),
+            'username' => $this->request->getPost('username'),
+            'description' => $this->request->getPost('description'),
+        ]);
+
+        return view('hosting-success');
     }
 
     public function proses()

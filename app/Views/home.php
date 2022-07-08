@@ -80,7 +80,7 @@
                         </p>
                     </div>
                     <div class="card-btn-space">
-                        <button style="width: max-content;" class="btn btn-card text-white">Coba Sekarang</button>
+                        <a href="<?= route_to('home-hosting'); ?>" style="width: max-content;" class="btn btn-card text-white">Coba Sekarang</a>
                     </div>
                 </div>
             </div>
